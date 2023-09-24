@@ -1,0 +1,79 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: sans-serif
+}
+
+/* prettier-ignore */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* prettier-ignore */
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 2;
+  padding: 0;
+  font-weight: normal;
+}
+
+/* prettier-ignore */
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+.titulo-do-chat {
+  border: 0px black solid;
+  margin: 15px;
+  text-align: center;
+  font-family: impact;
+}
+
+#chat-screen {
+  box-shadow: 5px 5px 10px gray;
+  max-width: 720px;
+  margin: 12px auto; 
+  background-image: url(https://www.papeiseparede.com.br/3260-thickbox_default/papel-de-parede-emojis-chat-cinza.jpg.webp);
+    background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.msg-chat {
+  border: 3px solid black;
+  border-radius: 4px;
+  padding: 15px 10px;
+  width: 60%;
+  background-color: #AFEEEE;
+}
+.voce{
+  margin-left: 40%;
+    width: 100%;
+}
+.message-item{
+  padding: 10px;
+}
+
+#form-chat-send{
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+#message{
+  flex-grow: 1;
+  padding: 10px;
+  
+}
+.enviar{
+  flex-basis: 20%;
+    background-color: white;
+      border: none;
+  
+}
+.enviar:hover{
+  background-color:#00FF7F ;
+}
