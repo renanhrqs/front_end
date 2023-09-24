@@ -1,0 +1,34 @@
+function adicionarMensagem(remetente, texto) {
+    const messagesList = document.querySelector(".messages-list");
+    const messageItem = document.createElement("div");
+    messageItem.classList.add("message-item", "message-user", "voce");
+
+    const msgUser = document.createElement("div");
+    msgUser.classList.add("msg-user");
+    msgUser.innerHTML = `<strong>${remetente}:</strong>`;
+
+    const msgChat = document.createElement("div");
+    msgChat.classList.add("msg-chat");
+    msgChat.textContent = texto;
+
+    messageItem.appendChild(msgUser);
+    messageItem.appendChild(msgChat);
+
+    messagesList.appendChild(messageItem);
+
+    
+    messagesList.scrollTop = messagesList.scrollHeight;
+}
+
+
+document.getElementById("form-chat-send").addEventListener("submit", function(event) {
+    event.preventDefault();  
+
+    const messageInput = document.getElementById("message");
+    const messageText = messageInput.value;
+
+    if (messageText.trim() !== "") {
+        adicionarMensagem("Você", messageText);
+        messageInput.value = ""; 
+    }
+});
